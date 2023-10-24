@@ -1,0 +1,50 @@
+ /* Start Add Category  */
+div.add-category button {
+  background: rgb(30, 136, 229);
+  color: white;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 13px;
+  font-weight: 500;
+  border: 3px solid #0d6efd;
+  transition: all ease-out 0.7s;
+}
+
+div.add-category button:hover {
+  transform: scale(1.07);
+}
+
+ /* End Add Category  */
+/* Start table  */
+
+div.table-responsive {
+  min-height: 631px;
+}
+
+table .td-operation ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 9px;
+}
+
+table .td-operation ul li a {
+  width: fit-content;
+}
+table .td-operation ul li:hover,
+table .td-operation ul li:hover a {
+  background-color: #f2f2f2;
+}
+table .td-operation ul li:hover svg,
+table .td-operation ul li:hover a,table .td-operation ul li:hover button {
+  color: #0d6efd;
+}
+
+/* End table  */
+
+
+
+

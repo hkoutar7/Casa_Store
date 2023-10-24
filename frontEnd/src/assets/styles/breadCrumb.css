@@ -1,0 +1,23 @@
+/* Start breadcrumb  */
+
+*,
+p {
+  margin: 0;
+}
+
+nav[aria-label="breadcrumb"] {
+  margin-top: 13px;
+}
+
+.breadcrumb > li.breadcrumb-item p {
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  transition: all ease-out 0.7s;
+}
+
+.breadcrumb > li.breadcrumb-item p:hover {
+  color: #0d6efd;
+}
+
+/* End breadcrumb  */

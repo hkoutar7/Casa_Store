@@ -1,0 +1,103 @@
+/* Start Product Detail */
+div.card.productDetail {
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  div.card.productDetail {
+    width: fit-content;
+  }
+}
+
+div.card.productDetail > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-top: 30px;
+}
+div.card.productDetail > div:last-of-type {
+  width: 85%;
+  margin-top: 25px;
+}
+
+div.outer_img {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+div.outer_img > div.inner-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-width: 89vw;
+}
+
+div.card.productDetail h5.card-title {
+  font-size: 22px;
+}
+
+div.card.productDetail h5.card-title + p {
+  border-radius: 18px;
+  background: #ad32ad;
+  color: #fff;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 16px;
+  width: fit-content;
+  position: absolute;
+  top: -13px;
+  left: 7px;
+}
+
+.card-body .card-desc {
+  font-size: 13px;
+  color: #757575;
+}
+
+.card-body .card-available {
+  font-size: 15px;
+  font-weight: 600;
+}
+.card-body .card-price {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-body .card-price span {
+  color: purple;
+  font-size: medium;
+  margin-left: 6px;
+}
+
+.card-body .card-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+}
+.card-body .card-rating p {
+  margin: 0;
+  transform: translateY(1px);
+}
+.card-body .card-rating svg {
+  color: gold;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+/* End Product Detail */

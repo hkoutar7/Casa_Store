@@ -1,0 +1,141 @@
+/* Start table  */
+
+div.table-responsive {
+  min-height: 631px;
+}
+
+table td.td-img img {
+  width: 30px;
+}
+table td.td-title {
+  cursor: pointer;
+  position: relative;
+}
+
+table .td-operation ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 9px;
+}
+
+table .td-operation ul li a {
+  width: fit-content;
+}
+table .td-operation ul li:hover,
+table .td-operation ul li:hover a {
+  background-color: #f2f2f2;
+}
+table .td-operation ul li:hover svg,
+table .td-operation ul li:hover a,
+table .td-operation ul li:hover button {
+  color: #0d6efd;
+}
+
+.td-title span {
+  display: none;
+  line-height: 12px;
+  background: #dbd7d7;
+  border-radius: 6px;
+  padding: 8px 8px;
+  font-size: 11px;
+  position: absolute;
+  top: -37px;
+}
+
+.td-title span::after {
+  content: "";
+  border-width: 11px;
+  border-color: #dbd7d7 transparent transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  bottom: -20px;
+  right: 50%;
+}
+
+.td-title:hover span {
+  display: block;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* End table  */
+/* Start Pagination  */
+
+button.btn-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100px;
+}
+button.btn-pagination span:nth-last-child() {
+  font-size: 13px;
+}
+
+.paginate-holder {
+  justify-content: flex-end !important;
+}
+
+polygon {
+  fill: white;
+}
+
+@media (max-width: 767px) {
+  .paginate-holder {
+    margin-bottom: 50px;
+  }
+}
+
+/* End Pagination  */
+/* Start Add product  */
+
+div.add-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+div.add-product button {
+  background: rgb(30, 136, 229);
+  color: white;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 13px;
+  font-weight: 500;
+  border: 3px solid #0d6efd;
+  transition: all ease-out 0.7s;
+}
+
+div.add-product button:hover {
+  transform: scale(1.07);
+}
+
+/* End Add product  */
+
+/* Start Product  */
+
+.badge.text-bg-blue {
+  background-color: #2196f3;
+}
+
+.badge.text-bg-purple {
+  background-color: #b416b4;
+}
+
+.badge.text-bg-rose {
+  background-color: #ba68c8;
+}
+.badge.text-bg-yellow {
+  background-color: #f9a825;
+}
+
+/* End Product  */

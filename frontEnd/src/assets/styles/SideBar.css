@@ -1,0 +1,53 @@
+/* Start SideBar  */
+
+#SideBar {
+  background-color: #ddd;
+  height: calc(100vh - 65px);
+  border-radius: 0px 29px 29px 0;
+}
+#SideBar ul {
+  margin: 0;
+  padding: 49px 0;
+}
+
+#SideBar ul li {
+  background: #cecece;
+  padding: 12px 12px;
+  margin-bottom: 13px;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.7s;
+}
+#SideBar ul li:hover {
+  background-color: #c8c7c7;
+  transform: scale(1.01);
+}
+
+#SideBar ul li::after {
+  content: "";
+  position: absolute;
+  background: #2c44f9;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.8s ease;
+}
+
+#SideBar ul li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  #SideBar {
+    border-radius: 0px 0px 29px 29px !important;
+    width: 93vw !important;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* End SideBar  */

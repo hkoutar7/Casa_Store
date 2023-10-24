@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+  div.home {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #SideBar {
+    border-radius: 0px 0px 29px 29px;
+    width: 100vw;
+    height: fit-content;
+  }
+  #SideBar li {
+    width: fit-content;
+    padding: 0;
+    background-color: transparent !important;
+  }
+
+  #SideBar ul {
+    padding: 0;
+    display: flex;
+  }
+}
