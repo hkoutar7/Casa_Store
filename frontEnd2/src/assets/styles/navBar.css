@@ -1,0 +1,66 @@
+/* Start NavBar  */
+
+nav.navbar {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  padding: 12px 100px ;
+}
+
+nav > div:first-of-type {
+  gap: 30px;
+}
+
+div a.logo {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+div a.logo span:first-child {
+  font-weight: 900;
+  margin-right: 5px;
+}
+div a.logo span:last-child {
+  font-weight: 700;
+  color: #2196f3;
+}
+
+nav > div > div ul {
+  display: flex;
+  gap: 20px;
+}
+nav > div > div ul li a {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  color: black !important;
+  font-weight: 500 !important;
+  position: relative;
+}
+nav > div > div ul li a.active,
+nav > div > div ul li a:hover {
+  color: #2c44f9 !important;
+}
+
+nav > div > div ul a::after {
+  content: "";
+  position: absolute;
+  background: #2c44f9;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.8s ease;
+}
+nav > div > div ul a:hover::after,
+nav > div > div ul a.active::after {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  nav.navbar {
+    padding: 12px 0px ;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* End NavBar  */
