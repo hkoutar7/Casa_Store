@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { useDispatch} from 'react-redux';
 import {addProductToBasket} from "./../tlk/reducer/basketSlice";
 
-function formatText (word, type){
+export function formatText (word, type){
     switch (type)
     {
         case "title" :

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home'
-import NavBar from './Components/NavBar';
 import MyBasket from './Pages/MyBasket';
+import NavBar from './Components/NavBar';
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
