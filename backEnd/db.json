@@ -241,16 +241,16 @@
       "id": 22
     },
     {
-      "title": "Prod V",
-      "description": "deesc",
-      "price": 45,
-      "category": "furniture",
+      "title": "product 7",
+      "description": "jmm",
+      "price": 567,
+      "category": "",
       "image": "https://shop.mevid.hu/wp-content/uploads/2019/11/image.jpg",
       "rating": {
         "rate": 0,
         "count": 0
       },
-      "id": 22
+      "id": 26
     }
   ],
   "categories": [

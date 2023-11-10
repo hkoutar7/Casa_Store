@@ -1,5 +1,4 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import About from "./pages/AboutUs";
 import ProductSection from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import ProductAdd from "./pages/ProductAdd";
@@ -45,7 +44,6 @@ function App() {
                 <Route path="edit_category/:id" element={<CategoryEdit />} />
               </Route>
 
-              <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

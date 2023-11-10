@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const basketSlice = createSlice({
+const basketSlice = createSlice({
 
     name : "basketSlice",
     initialState : [],
@@ -23,9 +23,25 @@ export const basketSlice = createSlice({
         clearProductsFromBasket : () => {
             return [];
         },
+        incrementByOne : (state, action) => {
+            let product = state.find((pd) => pd.id === action.payload.id);
+            product.quantity += 1;
+        },
+        decremetByOne : (state, action) => {
+            let product = state.find((pd) => pd.id === action.payload.id);
+            if (product.quantity > 0)
+                product.quantity -= 1;
+        },
     }
 
 });
 
-export const { getProductFromBasket, addProductToBasket, delateProductFromBasket ,clearProductsFromBasket } =basketSlice.actions;
+export const {
+    getProductFromBasket,
+    addProductToBasket,
+    delateProductFromBasket,
+    clearProductsFromBasket,
+    incrementByOne,
+    decremetByOne,
+} = basketSlice.actions;
 export default basketSlice.reducer;
