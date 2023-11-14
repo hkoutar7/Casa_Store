@@ -186,7 +186,7 @@ p {
 #myBasket > div > div:last-of-type {
   background: #ffffff;
   padding: 21px 30px;
-  transform: translateY(65px);
+  transform: translateY(48px);
   border-radius: 9px;
 }
 

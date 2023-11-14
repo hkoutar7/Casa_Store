@@ -6,6 +6,9 @@ import { formatText } from "./Card";
 import { addProductToBasket } from "../tlk/reducer/basketSlice";
 
 import "react-multi-carousel/lib/styles.css";
+import "./../assets/styles/productCarousel.css";
+import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
+import { BsFillCartPlusFill } from "react-icons/bs";
 
 const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
@@ -17,19 +20,43 @@ const responsive = {
 const ProductCarousel = ({ products }) => {
 
     let dispatch = useDispatch();
+
+    let generateStar = (numberStar) => {
+        return (
+        <>
+            {Array.from({ length: numberStar }, (_, index) => (
+                <AiFillStar key={index} />
+            ))}
+        </>
+        );
+    }
+
     
     return (
-        <Carousel responsive={responsive}>
+        <Carousel  responsive={responsive}>
             {products.map((product) => (
-                <Card key={product.id} className="text-center" style={{ height: "370px" }}>
-                    <Card.Header>{formatText(product.title, "title")}</Card.Header>
-                    <Card.Body>
-                        <img src={product.image} alt="img isn't found" style={{ width: '50px' }} />
-                        <Card.Text>{formatText(product.description, "description")}</Card.Text>
-                        <Button onClick={() => dispatch(addProductToBasket(product))} variant="primary">Add to Cart</Button>
-                    </Card.Body>
-                    <Card.Footer className="text-muted">{product.price} $</Card.Footer>
-                </Card>
+                <div id="productCarousel" key={product.id}>
+                    <div className="row">
+                        <div className="col-6">
+                            <AiOutlineHeart />
+                        </div>
+                        <div className={`col-6 ${ product.price < 100 ? "active" : "" } `}>
+                            {product.price} $
+                        </div>
+                    </div>
+                    <picture>
+                        <img src={product.image} alt="imag not found" />
+                    </picture>
+                    <div className="productCarouselDescription">
+                        <p>{formatText(product.title, "title")}</p>
+                        <p> {formatText(product.description, "description")} </p>
+                        <div> { generateStar(Math.round(product.rating.rate)) } </div>
+                        <button onClick={() => dispatch(addProductToBasket(product))} variant="primary">
+                            <BsFillCartPlusFill />
+                            <span>Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
             ))}
         </Carousel>
     );

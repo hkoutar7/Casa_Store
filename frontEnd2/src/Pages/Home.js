@@ -17,7 +17,7 @@ export default function Home() {
         <>  
         <SliderAnimated />
         <div className="container mt-5">
-            <Header/>
+        <Header/>
         </div> 
         </>
     );
