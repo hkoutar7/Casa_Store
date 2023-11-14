@@ -67,9 +67,9 @@ export default function MyBasket() {
           products.length > 0 ?  (<>
             <p className="removeAll" onClick={() => dispatch(clearProductsFromBasket())}>remove all</p>
             <Table responsive>
-              <tbody>
-                {products.map((product) => (
-                  <ProductRow key={product.id} product={product} />
+              <tbody >
+                {products.map((product, index) => (
+                  <ProductRow key={product.id || index} product={product} />
                 ))}
               </tbody>
             </Table> 
