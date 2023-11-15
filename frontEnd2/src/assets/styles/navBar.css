@@ -128,5 +128,9 @@ a {
     font-size: 13px;
   }
 }
-
+@media screen and (max-width: 767px) {
+  nav > div > div > ul + div:first-of-type {
+    justify-content: flex-start;
+  }
+}
 /* End NavBar  */

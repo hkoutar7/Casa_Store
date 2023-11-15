@@ -38,4 +38,18 @@
   background-color: #1679c8;
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 767px) {
+  #missingItem p:last-of-type {
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+  #categoryTop .category-container {
+    gap: 9px 10px;
+    justify-content: flex-start;
+  }
+  #categoryTop .category-item {
+    margin: 0;
+  }
+}
 /* End Missing Item  */
