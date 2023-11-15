@@ -1,0 +1,99 @@
+/* Start Product Carousel  */
+
+#productCarousel {
+  background-color: #fff;
+  padding: 21px 17px;
+  border-radius: 10px;
+  width: 98%;
+  box-shadow: rgb(0 0 0 / 13%) 0px 2px 18px 0px inset;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+#productCarousel picture {
+  display: block;
+  min-height: 316px;
+  padding: 37px;
+  text-align: center;
+}
+
+#productCarousel picture > img {
+  height: 183px;
+}
+
+#productCarousel > div:first-of-type > div:nth-of-type(2) {
+  text-align: end;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #42a5f5;
+  color: #fff;
+  transform: translateX(10px);
+  padding: 4px 18px;
+  position: relative;
+}
+
+#productCarousel > div:first-of-type > div:nth-of-type(2).active {
+  background-color: #ff7081;
+}
+
+#productCarousel > div:first-of-type > div:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent white;
+  border-width: 19px;
+  border-style: solid;
+}
+
+#productCarousel div.productCarouselDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#productCarousel div.productCarouselDescription p:first-of-type {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+#productCarousel div.productCarouselDescription p:nth-of-type(2) {
+  padding: 0px 15px;
+  margin-bottom: 13px;
+  color: #242323;
+  font-size: 15px;
+  min-height: 90px;
+}
+
+#productCarousel div.productCarouselDescription button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  background-color: #42a5f5;
+  color: #fff;
+  font-size: 17px;
+  padding: 5px 0px;
+  margin-top: 14px;
+  border-radius: 9px;
+  border: 2px solid #1976d2;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+#productCarousel div.productCarouselDescription button:hover {
+  transform: scale(1.02);
+}
+
+#productCarousel div.productCarouselDescription div svg {
+  color: #fbc02d;
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+/* End Product Carousel  */

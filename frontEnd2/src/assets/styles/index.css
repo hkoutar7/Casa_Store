@@ -3,6 +3,7 @@
 
 /* Start Global Variable  */
 :root {
+  --background-color : #fafafc;
 }
 /* End Global Variable  */
 /* Start Global Rules  */
@@ -22,6 +23,7 @@ html {
 
 body {
   font-family: "Cairo", sans-serif;
+  background: var(--background-color) !important;
 }
 
 li {
@@ -35,4 +37,5 @@ a {
 p {
   margin: 0;
 }
+
 /* End Global Rules  */

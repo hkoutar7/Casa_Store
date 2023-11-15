@@ -251,32 +251,50 @@
         "count": 0
       },
       "id": 26
+    },
+    {
+      "title": "Sweather",
+      "description": "this sweather is very cozy and warm ",
+      "price": 67,
+      "category": "",
+      "image": "https://shop.mevid.hu/wp-content/uploads/2019/11/image.jpg",
+      "rating": {
+        "rate": 0,
+        "count": 0
+      },
+      "id": 27
     }
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "electronics"
-    },
-    {
-      "id": 2,
-      "name": "jewelery"
+      "id": 4,
+      "name": "women's clothing",
+      "image": "https://png.pngtree.com/png-clipart/20190920/original/pngtree-lady-s-clothing-icon-illustration-png-image_4648328.jpg"
     },
     {
       "id": 3,
-      "name": "men's clothing"
+      "name": "men's clothing",
+      "image": "https://cdn2.vectorstock.com/i/1000x1000/11/31/black-suit-clothing-icon-vector-46381131.jpg"
     },
     {
-      "id": 4,
-      "name": "women's clothing"
+      "id": 2,
+      "name": "jewelery",
+      "image": "https://cdn-icons-png.flaticon.com/512/11339/11339500.png"
+    },
+    {
+      "id": 1,
+      "name": "electronics",
+      "image": "https://png.pngtree.com/png-vector/20190214/ourmid/pngtree-electronics-icon-png-image_428294.jpg"
     },
     {
       "name": "furniture",
-      "id": 7
+      "id": 7,
+      "image": "https://cdn-icons-png.flaticon.com/512/189/189916.png"
     },
     {
       "name": "Harware-materiels and electronics-pieces",
-      "id": 8
+      "id": 8,
+      "image": "https://cdn-icons-png.flaticon.com/512/5711/5711419.png"
     }
   ]
 }

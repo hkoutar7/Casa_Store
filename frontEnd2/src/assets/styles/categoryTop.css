@@ -1,0 +1,68 @@
+#categoryTop h4 {
+  text-align: center;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin: 76px 0 0px 0;
+}
+
+#categoryTop p {
+  text-align: center;
+  margin: 0px 0 8px;
+  font-size: 11px;
+  color: #616161;
+}
+
+#categoryTop .category-container {
+  counter-reset: category-counter;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 9px;
+}
+
+#categoryTop .category-item {
+  counter-increment: category-counter; 
+  border-radius: 17px;
+  color: #616161;
+  text-align: center;
+  margin: 0;
+  padding: 6px 6px;
+  text-transform: capitalize;
+  font-size: 14px;
+  width: 141px;
+  background-color: #e0e0e0;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+#categoryTop .category-item::before {
+  content: counter(category-counter);
+  position: absolute;
+  bottom: -13px;
+  left: 9px;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #42a5f5;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#categoryTop .category-item::after {
+  content: "";
+  background: #42a5f5;
+  width: 57px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}

@@ -7,19 +7,36 @@ p {
   margin: 0;
   padding: 0;
 }
-
-#myBasket > div > div:first-of-type > p {
+#myBasket > div > div:first-of-type {
+  position: relative;
+}
+#myBasket > div > div:first-of-type > p.titleCart {
   font-size: 33px;
   font-weight: bold;
   text-transform: lowercase;
 }
 
-#myBasket > div > div:first-of-type > p > span {
+#myBasket > div > div:first-of-type > p.titleCart > span {
   color: #21b1f6;
   font-size: 19px;
   font-weight: bold;
   margin-left: 31px;
   word-spacing: -2px;
+}
+
+#myBasket > div > div:first-of-type > p.removeAll {
+  background: #da4559;
+  width: fit-content;
+  margin: 0;
+  color: white;
+  padding: 3px 11px;
+  border-radius: 10px;
+  border-bottom: 2px solid #af3344;
+  position: absolute;
+  z-index: 2;
+  top: 74px;
+  left: 24px;
+  cursor: pointer;
 }
 
 #myBasket > div > div:first-of-type table > tbody tr {
@@ -40,9 +57,10 @@ p {
   table
   > tbody
   td:nth-of-type(3)
-  > div
-  svg:first-of-type {
-  font-size: 19px;
+  > svg:first-of-type {
+  font-size: 20px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 #myBasket
   > div
@@ -50,10 +68,10 @@ p {
   table
   > tbody
   td:nth-of-type(3)
-  > div
-  svg:last-of-type {
-  font-size: 23px;
-      transform: translateX(2px);
+  > svg:last-of-type {
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 #myBasket > div > div:first-of-type table > tbody td img {
@@ -141,12 +159,35 @@ p {
   align-items: center;
 }
 
+#myBasket > div > div:first-child > div:first-of-type {
+  background: #fff;
+  padding: 68px 8px 0px;
+  border-radius: 11px;
+  position: relative;
+  overflow: hidden;
+}
+
+#myBasket > div > div:first-child > div:first-of-type::after {
+  content: "SALE TIME";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #da4559;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transform: rotate(45deg) translate(32px, -7px);
+  padding: 5px 29px;
+}
+
 /* End Section 1 MyBasket  */
 /* Start Section 2 My Basket  */
 
 #myBasket > div > div:last-of-type {
-  background: #f8f8f8;
+  background: #ffffff;
   padding: 21px 30px;
+  transform: translateY(48px);
+  border-radius: 9px;
 }
 
 #myBasket > div > div:last-of-type > div:first-of-type p:first-of-type {
