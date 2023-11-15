@@ -180,6 +180,75 @@ p {
   padding: 5px 29px;
 }
 
+@media screen and (max-width: 767px) {
+  #myBasket > div > div:first-of-type table > tbody td:not(td:first-of-type) {
+    font-size: 11px;
+    min-width: 59px;
+  }
+  #myBasket
+    > div
+    > div:first-of-type
+    table
+    > tbody
+    td:first-of-type
+    > div
+    > p:first-of-type {
+    font-size: 11px;
+  }
+  #myBasket
+    > div
+    > div:first-of-type
+    table
+    > tbody
+    td:first-of-type
+    > div
+    > p:nth-last-of-type(2) {
+    font-size: 10px;
+  }
+  #myBasket
+    > div
+    > div:first-of-type
+    table
+    > tbody
+    td:first-of-type
+    > div
+    > p:nth-last-of-type(1) {
+    font-size: 10px;
+  }
+  #myBasket
+    > div
+    > div:first-of-type
+    table
+    > tbody
+    td:nth-of-type(3)
+    > svg:first-of-type,
+  #myBasket
+    > div
+    > div:first-of-type
+    table
+    > tbody
+    td:nth-of-type(3)
+    > svg:last-of-type {
+    font-size: 12px;
+  }
+  #myBasket > div > div:first-of-type table > tbody td:last-of-type button {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  #myBasket > div > div:first-of-type > p.removeAll {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  #myBasket > div > div:first-of-type > p.titleCart {
+    font-size: 20px;
+    margin-bottom: 29px;
+  }
+  #myBasket > div > div:first-of-type > p.titleCart > span {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+}
+
 /* End Section 1 MyBasket  */
 /* Start Section 2 My Basket  */
 

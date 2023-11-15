@@ -7,8 +7,9 @@ import { addProductToBasket } from "../tlk/reducer/basketSlice";
 
 import "react-multi-carousel/lib/styles.css";
 import "./../assets/styles/productCarousel.css";
-import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart, AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import { BsFillCartPlusFill } from "react-icons/bs";
+import { useState } from "react";
 
 const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
@@ -20,6 +21,13 @@ const responsive = {
 const ProductCarousel = ({ products }) => {
 
     let dispatch = useDispatch();
+    let [likes, setLikes] = useState(Array(products.length).fill(false));
+
+    let handleClick = (index) => {
+        let copyLikes = [...likes];
+        copyLikes[index] = ! copyLikes[index];
+        setLikes(copyLikes);
+    }
 
     let generateStar = (numberStar) => {
         return (
@@ -34,11 +42,11 @@ const ProductCarousel = ({ products }) => {
     
     return (
         <Carousel  responsive={responsive}>
-            {products.map((product) => (
-                <div id="productCarousel" key={product.id}>
+            {products.map((product, index) => (
+                <div id="productCarousel" key={product.id} >
                     <div className="row">
-                        <div className="col-6">
-                            <AiOutlineHeart />
+                        <div className="col-6" onClick={ () => handleClick(index)}>
+                            { !likes[index] ? <AiOutlineHeart /> : <AiFillHeart style={{color : "red"}} /> }
                         </div>
                         <div className={`col-6 ${ product.price < 100 ? "active" : "" } `}>
                             {product.price} $

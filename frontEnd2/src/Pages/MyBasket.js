@@ -20,10 +20,10 @@ export default function MyBasket() {
     return (
       <tr>
         <td className="row">
-          <div className="col-4">
+          <div className="col-sm-12 col-md-4">
             <img src={product.image} alt="img not found" />
           </div>
-          <div className="col-8">
+          <div className="col-sm-12 col-md-8">
             <p>{formatText(product.title, "title")}</p>
             <p>All size available</p>
             <p>
@@ -58,25 +58,32 @@ export default function MyBasket() {
   return (
     <div id="myBasket" className="container mt-5">
       <div className="row">
-        <div className="col-9">
+        <div className="col-sm-12 col-md-9">
           <p className="titleCart">
             Shopping Cart <span>{products.length} items</span>
           </p>
           {console.log(products)}
-          { 
-          products.length > 0 ?  (<>
-            <p className="removeAll" onClick={() => dispatch(clearProductsFromBasket())}>remove all</p>
-            <Table responsive>
-              <tbody >
-                {products.map((product, index) => (
-                  <ProductRow key={product.id || index} product={product} />
-                ))}
-              </tbody>
-            </Table> 
-            </>) : <MissingItem/>
-          }
+          {products.length > 0 ? (
+            <>
+              <p
+                className="removeAll"
+                onClick={() => dispatch(clearProductsFromBasket())}
+              >
+                remove all
+              </p>
+              <Table responsive>
+                <tbody>
+                  {products.map((product, index) => (
+                    <ProductRow key={product.id || index} product={product} />
+                  ))}
+                </tbody>
+              </Table>
+            </>
+          ) : (
+            <MissingItem />
+          )}
         </div>
-        <div className="col-3">
+        <div className="col-sm-12 col-md-3">
           <MyBasketDetails />
         </div>
       </div>
