@@ -6,9 +6,9 @@ Welcome to Casa Store, your go-to online shopping destination! This project is t
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Video Record](#Demo)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
+- [Installation and Setup](#usage)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
