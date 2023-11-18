@@ -22,6 +22,20 @@ Welcome to Casa Store, your go-to online shopping destination! This project is t
   - Calculate the total cost of all items.
   - clear the shopping cart
 
+- **Second Hand Store Admin! 🛍️ **
+- Products
+  - **Check Them Out:** See what we've got in store.
+  - **Add Something New:** Introduce fresh items to the collection.
+  - **Spruce Things Up:** Make changes to product details.
+  - **Out with the Old:** Remove items we no longer need.
+  - **Get the Scoop:** Dive into the details of each product.
+  - **Sort by Style:** Filter products based on their category.
+- Categories
+  - **Mix It Up:** Add new categories for our unique finds.
+  - **Rename the Party:** Give our categories a new name.
+  - **Clean Up Crew:** Remove categories that are no longer needed.
+  
+
 ## Technologies Used
 
 - React
