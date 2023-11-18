@@ -22,7 +22,7 @@ Welcome to Casa Store, your go-to online shopping destination! This project is t
   - Calculate the total cost of all items.
   - clear the shopping cart
 
-- **Second Hand Store Admin! 🛍️ **
+- **Second Hand Store Admin! 🛍️**
 - Products
   - **Check Them Out:** See what we've got in store.
   - **Add Something New:** Introduce fresh items to the collection.
