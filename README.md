@@ -35,7 +35,7 @@ Welcome to Casa Store, your go-to online shopping destination! This project is t
 
 ## Video Record
 
-missing
+- [Demo](https://drive.google.com/file/d/1mLq2xRIo-1Ygynz_yqQhr-qxrIEKf_EG/view?usp=drive_link)
 
 ### Installation and Setup
 
