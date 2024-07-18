@@ -25,11 +25,11 @@ jobs:
       - name: Navigate to frontEnd2 directory 📁
         run: cd frontEnd2
 
-      - name: Update Browserslist DB 🌐
-        run: npx update-browserslist-db@latest
-
       - name: Install Dependencies 📦
         run: npm install
+
+      - name: Update Browserslist DB 🌐
+        run: npx update-browserslist-db@latest --dir ./
 
       - name: Build React App 🏗️
         run: npm run build
