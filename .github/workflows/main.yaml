@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
 
     steps:
       - name: Checkout Code 🚚
@@ -26,7 +26,7 @@ jobs:
         run: cd frontEnd2
 
       - name: Update Browserslist DB 🌐
-        run: npx update-browserslist-db@latest
+        run: npx update-browserslist-db@latest --dir ./
 
       - name: Install Dependencies 📦
         run: npm install
