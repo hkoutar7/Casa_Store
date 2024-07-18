@@ -17,10 +17,17 @@ jobs:
       - name: Checkout Code 🚚
         uses: actions/checkout@v3
 
+      - name: Set up Node.js ${{ matrix.node-version }} 🛠️
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: Install Dependencies 📦
+        working-directory: frontEnd2
         run: npm install
 
       - name: Build React App 🏗️
+        working-directory: frontEnd2
         run: npm run build
 
       - name: Upload to cPanel 📂
@@ -29,7 +36,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/
+          local-dir: frontEnd2/build
+          server-dir: /public_html/casa
           exclude: |
             **/.git**
             **/.git*/**
