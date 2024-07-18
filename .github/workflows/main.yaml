@@ -22,16 +22,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Navigate to frontEnd2 directory 📁
+        run: cd frontEnd2
+
       - name: Update Browserslist DB 🌐
         run: npx update-browserslist-db@latest
 
       - name: Install Dependencies 📦
-        working-directory: frontEnd2
         run: npm install
 
       - name: Build React App 🏗️
-        working-directory: frontEnd2
         run: npm run build
+
+      - name: Navigate back to main directory 📂
+        run: cd ..
 
       - name: Upload to cPanel 📂
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
