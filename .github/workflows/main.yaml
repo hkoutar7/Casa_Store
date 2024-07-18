@@ -1,52 +1,35 @@
-name: Deploy to cPanel
+name: Deploy Project to cPanel
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+    deploy:
+        name: Deploy to cPanel
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
 
-    steps:
-      - name: Checkout Code 🚚
-        uses: actions/checkout@v3
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "16"
 
-      - name: Set up Node.js ${{ matrix.node-version }} 🛠️
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+            - name: Install dependencies
+              run: |
+                  cd frontEnd2
+                  npm install
+                  npm run build
 
-      - name: Navigate to frontEnd2 directory 📁
-        run: cd frontEnd2
-
-      - name: Install Dependencies 📦
-        run: npm install
-
-      - name: Update Browserslist DB 🌐
-        run: npx update-browserslist-db@latest --dir ./
-
-      - name: Build React App 🏗️
-        run: npm run build
-
-      - name: Navigate back to main directory 📂
-        run: cd ..
-
-      - name: Upload to cPanel 📂
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: frontEnd2/build
-          server-dir: /public_html/casa
-          exclude: |
-            **/.git**
-            **/.git*/**
-            **/node_modules/**
-            **/.**
+            - name: Deploy to cPanel
+              uses: SamKirkland/FTP-Deploy-Action@4.3.3
+              with:
+                  server: ${{ secrets.FTP_SERVER }}
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: frontEnd2/build
+                  remote-dir: public_html/casa
